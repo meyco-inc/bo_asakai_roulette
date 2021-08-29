@@ -135,6 +135,9 @@
 		}
 
 		var start = function() {
+			const audioElement = document.querySelector("audio");
+			audioElement.play();
+			
 			p.playCount++;
 			if (p.maxPlayCount && p.playCount > p.maxPlayCount) {
 				return;
@@ -149,6 +152,9 @@
 		}
 
 		var stop = function(option) {
+			const audioElement = document.querySelector("audio");
+			audioElement.pause();
+			
 			if (!p.isSlowdown) {
 				if (option) {
 					var stopImageNumber = Number(option.stopImageNumber);

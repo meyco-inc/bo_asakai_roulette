@@ -16,6 +16,8 @@ $(function(){
 			$('#stopImageNumber').spinner('disable');
 			$('.start').attr('disabled', 'true');
 			$('.stop').removeAttr('disabled');
+			console.log($("#audio"))
+			$('#audio').play()
 		},
 		slowDownCallback : function() {
 			appendLogMsg('slowdown');
@@ -41,6 +43,7 @@ $(function(){
 	});
 	$('.stop').attr('disabled', 'true');
 	$('.start').click(function(){
+		console.log("hello")
 		rouletter.roulette('start');	
 	});
 
